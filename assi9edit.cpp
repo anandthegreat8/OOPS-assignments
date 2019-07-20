@@ -130,5 +130,6 @@ int main()
 	obj2.personal::display();
 	obj2.academic::display();
 	obj2.display();
+ 	cout<<"THIS IS THE EDITED FILE";
 	return 0;
 }
