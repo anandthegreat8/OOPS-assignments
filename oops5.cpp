@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class basic                                                             //class basic
+class basic                                                        //class basic
 {
     char name[100];
     char dob[11];
@@ -35,7 +35,7 @@ public:
         strcpy(bg,c);
     }
 };
-class phy                                                                           //calss phy
+class phy                                                            //class phy
 {
     float weight,height;
 public:
@@ -62,7 +62,7 @@ public:
     }
 
 };
-class insurance                                                                 //class insurance
+class insurance                                                //class insurance
 {
     long int policy_no;
     char address[1000];
@@ -123,7 +123,7 @@ public:
         mobile_no=h;
     }
 }b;
-int main()                                                                          //MAIN FUNCTION
+int main()                                                       //MAIN FUNCTION
 {
     int n,m=0,k=0,j=0,i,count=0,flag=2,temp=0;
     long int p;
@@ -145,16 +145,19 @@ int main()                                                                      
             }
             case 2:
             {
-                cout<<"How many entries you want to do:";
+                cout<<"To continue press 1 or to exit press 0:";
                 cin>>m;
-                for(i=k;i<m+k;i++)
+                while(m==1)
                 {
-                    (a+i)->basic::input();
-                    (a+i)->phy::input();
-                    (a+i)->insurance::input();
-                    (a+i)->input();
+                      (a+k)->basic::input();
+                      (a+k)->phy::input();
+                      (a+k)->insurance::input();
+                      (a+k)->input();
+                      k++;
+                      cout<<"To continue press 1 or to exit press 0:";
+                      cin>>m;
+
                 }
-                k=k+m;
 
                 break ;
             }
@@ -178,9 +181,10 @@ int main()                                                                      
                         a[j-1]=a[j];
                     }
                 k--;
+                cout<<"Entry Deleted Successfully\n";
                 }
                 else
-                    cout<<"NO SUCH ENTRY";
+                    cout<<"\nNO SUCH ENTRY\n";
 
                 break;
             }
@@ -193,13 +197,15 @@ int main()                                                                      
                     (a+i)->insurance::output();
                     (a+i)->output();
                 }
+                if(i==0)
+                  cout<<"\nNO DATA TO DISPLAY\n";
 
                 break;
 
             }
             case 5:
             {
-                cout<<"Enter policy number:";
+                cout<<"\nEnter policy number:";
                 cin>>m;
                 for(i=0;i<k;i++)
                 {
@@ -216,7 +222,7 @@ int main()                                                                      
                     (a+j)->output();
                 }
                 else
-                    cout<<"NOT FOUND\n";
+                    cout<<"\nNOT FOUND\n";
                 break ;
             }
             case 6:
